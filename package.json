@@ -26,6 +26,17 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "jest": {
+    "clearMocks": true,
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx}",
+      "!src/index.tsx"
+    ],
+    "displayName": "Game of Life",
+    "resetMocks": true,
+    "resetModules": true,
+    "restoreMocks": true
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
