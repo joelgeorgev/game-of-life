@@ -19,6 +19,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "compile": "tsc",
+    "compile:watch": "npm run compile -- --watch",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
