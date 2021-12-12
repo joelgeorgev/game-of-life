@@ -10,6 +10,7 @@
     "@types/node": "^16.11.12",
     "@types/react": "^17.0.37",
     "@types/react-dom": "^17.0.11",
+    "prettier": "^2.5.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
@@ -21,6 +22,7 @@
     "build": "react-scripts build",
     "compile": "tsc",
     "compile:watch": "npm run compile -- --watch",
+    "format": "prettier --check \"./**/*.{ts,tsx,json,yml,md}\"",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
