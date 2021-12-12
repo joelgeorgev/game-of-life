@@ -22,6 +22,7 @@
     "@types/node": "^16.11.12",
     "@types/react": "^17.0.37",
     "@types/react-dom": "^17.0.11",
+    "gh-pages": "^3.2.3",
     "prettier": "^2.5.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -36,7 +37,9 @@
     "compile:watch": "npm run compile -- --watch",
     "format": "prettier --check \"./**/*.{ts,tsx,json,yml,md}\"",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "jest": {
     "clearMocks": true,
