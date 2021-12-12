@@ -5,6 +5,8 @@
 
 > Conway's Game of Life
 
+Check out the app [here](https://joelgeorgev.github.io/game-of-life).
+
 ## To run the app
 
 ```bash
