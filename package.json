@@ -1,6 +1,18 @@
 {
   "name": "game-of-life",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "description": "Conway's Game of Life",
+  "repository": "https://github.com/joelgeorgev/game-of-life",
+  "author": "Joel George V",
+  "homepage": "https://joelgeorgev.github.io/game-of-life",
+  "keywords": [
+    "typescript",
+    "React",
+    "reactjs",
+    "game",
+    "life"
+  ],
+  "license": "MIT",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
