@@ -1,9 +1,9 @@
 import type { Cell } from '../types'
 
-const isLive = (cell: Cell): boolean => cell === 1
-const isDead = (cell: Cell): boolean => !isLive(cell)
+const ALIVE = 1
+const DEAD = 0
 
-const getCountOfNeighbours = (
+const getCountOfLiveNeighbours = (
   row: number,
   column: number,
   board: readonly Cell[][]
@@ -15,32 +15,32 @@ const getCountOfNeighbours = (
   const nextRow = board[row + 1]
 
   if (previousRow) {
-    if (previousRow[column - 1] && isLive(previousRow[column - 1])) {
+    if (previousRow[column - 1] && previousRow[column - 1] === ALIVE) {
       count++
     }
-    if (previousRow[column] && isLive(previousRow[column])) {
+    if (previousRow[column] && previousRow[column] === ALIVE) {
       count++
     }
-    if (previousRow[column + 1] && isLive(previousRow[column + 1])) {
+    if (previousRow[column + 1] && previousRow[column + 1] === ALIVE) {
       count++
     }
   }
 
-  if (currentRow[column - 1] && isLive(currentRow[column - 1])) {
+  if (currentRow[column - 1] && currentRow[column - 1] === ALIVE) {
     count++
   }
-  if (currentRow[column + 1] && isLive(currentRow[column + 1])) {
+  if (currentRow[column + 1] && currentRow[column + 1] === ALIVE) {
     count++
   }
 
   if (nextRow) {
-    if (nextRow[column - 1] && isLive(nextRow[column - 1])) {
+    if (nextRow[column - 1] && nextRow[column - 1] === ALIVE) {
       count++
     }
-    if (nextRow[column] && isLive(nextRow[column])) {
+    if (nextRow[column] && nextRow[column] === ALIVE) {
       count++
     }
-    if (nextRow[column + 1] && isLive(nextRow[column + 1])) {
+    if (nextRow[column + 1] && nextRow[column + 1] === ALIVE) {
       count++
     }
   }
@@ -51,14 +51,21 @@ const getCountOfNeighbours = (
 export const life = (board: readonly Cell[][]): Cell[][] =>
   board.map((row, rowIndex): Cell[] =>
     row.map((cell, cellIndex): Cell => {
-      const countOfNeighbours = getCountOfNeighbours(rowIndex, cellIndex, board)
+      const countOfLiveNeighbours = getCountOfLiveNeighbours(
+        rowIndex,
+        cellIndex,
+        board
+      )
 
-      if (isLive(cell) && (countOfNeighbours < 2 || countOfNeighbours > 3)) {
-        return 0
+      if (
+        cell === ALIVE &&
+        (countOfLiveNeighbours < 2 || countOfLiveNeighbours > 3)
+      ) {
+        return DEAD
       }
 
-      if (isDead(cell) && countOfNeighbours === 3) {
-        return 1
+      if (cell === DEAD && countOfLiveNeighbours === 3) {
+        return ALIVE
       }
 
       return cell
