@@ -1,23 +1,22 @@
 {
   "files": {
-    "main.css": "/game-of-life/static/css/main.f09a1402.chunk.css",
-    "main.js": "/game-of-life/static/js/main.46821ec4.chunk.js",
-    "main.js.map": "/game-of-life/static/js/main.46821ec4.chunk.js.map",
-    "runtime-main.js": "/game-of-life/static/js/runtime-main.66215dea.js",
-    "runtime-main.js.map": "/game-of-life/static/js/runtime-main.66215dea.js.map",
-    "static/js/2.0391b496.chunk.js": "/game-of-life/static/js/2.0391b496.chunk.js",
-    "static/js/2.0391b496.chunk.js.map": "/game-of-life/static/js/2.0391b496.chunk.js.map",
-    "static/js/3.69b6b62c.chunk.js": "/game-of-life/static/js/3.69b6b62c.chunk.js",
-    "static/js/3.69b6b62c.chunk.js.map": "/game-of-life/static/js/3.69b6b62c.chunk.js.map",
+    "main.js": "/game-of-life/static/js/main.011785b2.chunk.js",
+    "main.js.map": "/game-of-life/static/js/main.011785b2.chunk.js.map",
+    "runtime-main.js": "/game-of-life/static/js/runtime-main.3100c4ac.js",
+    "runtime-main.js.map": "/game-of-life/static/js/runtime-main.3100c4ac.js.map",
+    "static/js/2.576e2938.chunk.js": "/game-of-life/static/js/2.576e2938.chunk.js",
+    "static/js/2.576e2938.chunk.js.map": "/game-of-life/static/js/2.576e2938.chunk.js.map",
+    "static/js/3.c8ad7475.chunk.js": "/game-of-life/static/js/3.c8ad7475.chunk.js",
+    "static/js/3.c8ad7475.chunk.js.map": "/game-of-life/static/js/3.c8ad7475.chunk.js.map",
     "index.html": "/game-of-life/index.html",
-    "static/css/main.f09a1402.chunk.css.map": "/game-of-life/static/css/main.f09a1402.chunk.css.map",
-    "static/js/2.0391b496.chunk.js.LICENSE.txt": "/game-of-life/static/js/2.0391b496.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/game-of-life/static/media/logo.6ce24c58.svg"
+    "static/js/2.576e2938.chunk.js.LICENSE.txt": "/game-of-life/static/js/2.576e2938.chunk.js.LICENSE.txt",
+    "static/media/github.66378707.svg": "/game-of-life/static/media/github.66378707.svg",
+    "static/media/source-sans-pro-v11-latin-regular.74ddb2b0.woff": "/game-of-life/static/media/source-sans-pro-v11-latin-regular.74ddb2b0.woff",
+    "static/media/source-sans-pro-v11-latin-regular.96b15882.woff2": "/game-of-life/static/media/source-sans-pro-v11-latin-regular.96b15882.woff2"
   },
   "entrypoints": [
-    "static/js/runtime-main.66215dea.js",
-    "static/js/2.0391b496.chunk.js",
-    "static/css/main.f09a1402.chunk.css",
-    "static/js/main.46821ec4.chunk.js"
+    "static/js/runtime-main.3100c4ac.js",
+    "static/js/2.576e2938.chunk.js",
+    "static/js/main.011785b2.chunk.js"
   ]
 }
