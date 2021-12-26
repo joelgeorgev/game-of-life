@@ -48,7 +48,7 @@ const getCountOfLiveNeighbours = (
   return count
 }
 
-export const life = (board: readonly Cell[][]): Cell[][] =>
+export const next = (board: readonly Cell[][]): Cell[][] =>
   board.map((row, rowIndex): Cell[] =>
     row.map((cell, cellIndex): Cell => {
       const countOfLiveNeighbours = getCountOfLiveNeighbours(

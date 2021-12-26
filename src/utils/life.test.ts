@@ -1,8 +1,8 @@
-import { life } from './life'
+import { next } from './life'
 
-type Cell = ReturnType<typeof life>[0][0]
+type Cell = ReturnType<typeof next>[0][0]
 
-describe('life', () => {
+describe('next', () => {
   describe('Given a cell is alive', () => {
     describe.each<[Cell[][]]>([
       [
@@ -21,7 +21,7 @@ describe('life', () => {
       ]
     ])('When the number of neighbours is < 2', (board) => {
       test('the cell dies as if by solitude', () => {
-        expect(life(board)).toEqual([
+        expect(next(board)).toEqual([
           [0, 0, 0],
           [0, 0, 0],
           [0, 0, 0]
@@ -37,7 +37,7 @@ describe('life', () => {
           [0, 1, 1]
         ]
 
-        expect(life(board)).toEqual([
+        expect(next(board)).toEqual([
           [1, 0, 0],
           [1, 0, 0],
           [1, 1, 1]
@@ -53,7 +53,7 @@ describe('life', () => {
           [0, 1, 0]
         ]
 
-        expect(life(board)).toEqual([
+        expect(next(board)).toEqual([
           [0, 0, 0],
           [1, 1, 0],
           [0, 0, 0]
@@ -71,7 +71,7 @@ describe('life', () => {
           [0, 0, 1]
         ]
 
-        expect(life(board)).toEqual([
+        expect(next(board)).toEqual([
           [0, 0, 0],
           [0, 1, 0],
           [0, 0, 0]
@@ -89,7 +89,7 @@ describe('life', () => {
         [0, 0, 0, 0]
       ]
 
-      expect(life(board)).toEqual(board)
+      expect(next(board)).toEqual(board)
     })
 
     test('Bee-hive', () => {
@@ -101,7 +101,7 @@ describe('life', () => {
         [0, 0, 0, 0, 0, 0]
       ]
 
-      expect(life(board)).toEqual(board)
+      expect(next(board)).toEqual(board)
     })
 
     test('Loaf', () => {
@@ -114,7 +114,7 @@ describe('life', () => {
         [0, 0, 0, 0, 0, 0]
       ]
 
-      expect(life(board)).toEqual(board)
+      expect(next(board)).toEqual(board)
     })
 
     test('Boat', () => {
@@ -126,7 +126,7 @@ describe('life', () => {
         [0, 0, 0, 0, 0]
       ]
 
-      expect(life(board)).toEqual(board)
+      expect(next(board)).toEqual(board)
     })
 
     test('Tub', () => {
@@ -138,7 +138,7 @@ describe('life', () => {
         [0, 0, 0, 0, 0]
       ]
 
-      expect(life(board)).toEqual(board)
+      expect(next(board)).toEqual(board)
     })
   })
 
@@ -160,8 +160,8 @@ describe('life', () => {
         [0, 0, 0, 0, 0]
       ]
 
-      expect(life(board)).toEqual(nextBoard)
-      expect(life(nextBoard)).toEqual(board)
+      expect(next(board)).toEqual(nextBoard)
+      expect(next(nextBoard)).toEqual(board)
     })
 
     test('Toad', () => {
@@ -183,8 +183,8 @@ describe('life', () => {
         [0, 0, 0, 0, 0, 0]
       ]
 
-      expect(life(board)).toEqual(nextBoard)
-      expect(life(nextBoard)).toEqual(board)
+      expect(next(board)).toEqual(nextBoard)
+      expect(next(nextBoard)).toEqual(board)
     })
 
     test('Beacon', () => {
@@ -206,8 +206,8 @@ describe('life', () => {
         [0, 0, 0, 0, 0, 0]
       ]
 
-      expect(life(board)).toEqual(nextBoard)
-      expect(life(nextBoard)).toEqual(board)
+      expect(next(board)).toEqual(nextBoard)
+      expect(next(nextBoard)).toEqual(board)
     })
   })
 })
