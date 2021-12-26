@@ -1,4 +1,4 @@
-import { next } from './life'
+import { next, select } from './life'
 
 type Cell = ReturnType<typeof next>[0][0]
 
@@ -209,5 +209,39 @@ describe('next', () => {
       expect(next(board)).toEqual(nextBoard)
       expect(next(nextBoard)).toEqual(board)
     })
+  })
+})
+
+describe('select', () => {
+  test('kills a live cell', () => {
+    const board: Cell[][] = [
+      [0, 0, 0],
+      [0, 1, 0],
+      [0, 0, 0]
+    ]
+    const x = 1
+    const y = 1
+
+    expect(select(x, y, board)).toEqual([
+      [0, 0, 0],
+      [0, 0, 0],
+      [0, 0, 0]
+    ])
+  })
+
+  test('resurrects a dead cell', () => {
+    const board: Cell[][] = [
+      [0, 0, 0],
+      [0, 0, 0],
+      [0, 0, 0]
+    ]
+    const x = 1
+    const y = 1
+
+    expect(select(x, y, board)).toEqual([
+      [0, 0, 0],
+      [0, 1, 0],
+      [0, 0, 0]
+    ])
   })
 })

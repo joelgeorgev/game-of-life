@@ -71,3 +71,18 @@ export const next = (board: readonly Cell[][]): Cell[][] =>
       return cell
     })
   )
+
+export const select = (
+  x: number,
+  y: number,
+  board: readonly Cell[][]
+): Cell[][] =>
+  board.map((row, rowIndex): Cell[] =>
+    row.map((cell, cellIndex): Cell => {
+      if (rowIndex === x && cellIndex === y) {
+        return cell === ALIVE ? DEAD : ALIVE
+      }
+
+      return cell
+    })
+  )
