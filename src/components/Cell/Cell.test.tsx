@@ -8,6 +8,7 @@ type Props = ComponentProps<typeof Cell>
 type OnClick = Props['onClick']
 
 const createDefaultProps = (): Props => ({
+  isDead: false,
   isDisabled: false,
   onClick: () => {}
 })
@@ -16,6 +17,7 @@ const renderCell = (props?: Partial<Props>) =>
   render(<Cell {...createDefaultProps()} {...props} />)
 
 const findCell = (): HTMLButtonElement => screen.getByRole('button')
+const getCellLabel = () => findCell().getAttribute('aria-label')
 
 describe('Cell', () => {
   test('renders a cell', () => {
@@ -39,5 +41,17 @@ describe('Cell', () => {
     userEvent.click(findCell())
 
     expect(onClick).toHaveBeenCalledTimes(1)
+  })
+
+  test('renders a live cell', () => {
+    renderCell({ isDead: false })
+
+    expect(getCellLabel()).toEqual('Alive')
+  })
+
+  test('renders a dead cell', () => {
+    renderCell({ isDead: true })
+
+    expect(getCellLabel()).toEqual('Dead')
   })
 })

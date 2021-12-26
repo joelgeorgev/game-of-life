@@ -1,8 +1,13 @@
 interface Props {
+  isDead: boolean
   isDisabled: boolean
   onClick: () => void
 }
 
-export const Cell = ({ isDisabled, onClick }: Props) => (
-  <button disabled={isDisabled} onClick={onClick} />
+export const Cell = ({ isDead, isDisabled, onClick }: Props) => (
+  <button
+    aria-label={isDead ? 'Dead' : 'Alive'}
+    disabled={isDisabled}
+    onClick={onClick}
+  />
 )
