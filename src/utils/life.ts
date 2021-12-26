@@ -4,43 +4,43 @@ const ALIVE = 1
 const DEAD = 0
 
 const getCountOfLiveNeighbours = (
-  row: number,
-  column: number,
+  x: number,
+  y: number,
   board: readonly Cell[][]
 ): number => {
   let count: number = 0
 
-  const previousRow = board[row - 1]
-  const currentRow = board[row]
-  const nextRow = board[row + 1]
+  const previousRow = board[x - 1]
+  const currentRow = board[x]
+  const nextRow = board[x + 1]
 
   if (previousRow) {
-    if (previousRow[column - 1] && previousRow[column - 1] === ALIVE) {
+    if (previousRow[y - 1] && previousRow[y - 1] === ALIVE) {
       count++
     }
-    if (previousRow[column] && previousRow[column] === ALIVE) {
+    if (previousRow[y] && previousRow[y] === ALIVE) {
       count++
     }
-    if (previousRow[column + 1] && previousRow[column + 1] === ALIVE) {
+    if (previousRow[y + 1] && previousRow[y + 1] === ALIVE) {
       count++
     }
   }
 
-  if (currentRow[column - 1] && currentRow[column - 1] === ALIVE) {
+  if (currentRow[y - 1] && currentRow[y - 1] === ALIVE) {
     count++
   }
-  if (currentRow[column + 1] && currentRow[column + 1] === ALIVE) {
+  if (currentRow[y + 1] && currentRow[y + 1] === ALIVE) {
     count++
   }
 
   if (nextRow) {
-    if (nextRow[column - 1] && nextRow[column - 1] === ALIVE) {
+    if (nextRow[y - 1] && nextRow[y - 1] === ALIVE) {
       count++
     }
-    if (nextRow[column] && nextRow[column] === ALIVE) {
+    if (nextRow[y] && nextRow[y] === ALIVE) {
       count++
     }
-    if (nextRow[column + 1] && nextRow[column + 1] === ALIVE) {
+    if (nextRow[y + 1] && nextRow[y + 1] === ALIVE) {
       count++
     }
   }
