@@ -49,8 +49,8 @@ const getCountOfLiveNeighbours = (
 }
 
 export const next = (board: readonly Cell[][]): Cell[][] =>
-  board.map((row, rowIndex): Cell[] =>
-    row.map((cell, cellIndex): Cell => {
+  board.map((row, rowIndex) =>
+    row.map((cell, cellIndex) => {
       const countOfLiveNeighbours = getCountOfLiveNeighbours(
         rowIndex,
         cellIndex,
@@ -77,8 +77,8 @@ export const select = (
   y: number,
   board: readonly Cell[][]
 ): Cell[][] =>
-  board.map((row, rowIndex): Cell[] =>
-    row.map((cell, cellIndex): Cell => {
+  board.map((row, rowIndex) =>
+    row.map((cell, cellIndex) => {
       if (rowIndex === x && cellIndex === y) {
         return cell === ALIVE ? DEAD : ALIVE
       }
