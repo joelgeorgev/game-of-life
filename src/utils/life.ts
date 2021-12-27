@@ -1,4 +1,4 @@
-import type { Cell } from '../types'
+import type { Board } from '../types'
 
 const ALIVE = 1
 const DEAD = 0
@@ -6,7 +6,7 @@ const DEAD = 0
 const getCountOfLiveNeighbours = (
   x: number,
   y: number,
-  board: readonly Cell[][]
+  board: Readonly<Board>
 ): number => {
   let count: number = 0
 
@@ -48,7 +48,7 @@ const getCountOfLiveNeighbours = (
   return count
 }
 
-export const next = (board: readonly Cell[][]): Cell[][] =>
+export const next = (board: Readonly<Board>): Board =>
   board.map((row, rowIndex) =>
     row.map((cell, cellIndex) => {
       const countOfLiveNeighbours = getCountOfLiveNeighbours(
@@ -72,11 +72,7 @@ export const next = (board: readonly Cell[][]): Cell[][] =>
     })
   )
 
-export const select = (
-  x: number,
-  y: number,
-  board: readonly Cell[][]
-): Cell[][] =>
+export const select = (x: number, y: number, board: Readonly<Board>): Board =>
   board.map((row, rowIndex) =>
     row.map((cell, cellIndex) => {
       if (rowIndex === x && cellIndex === y) {

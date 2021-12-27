@@ -1,1 +1,2 @@
-export type Cell = 1 | 0
+type Cell = 1 | 0
+export type Board = Cell[][]

@@ -1,10 +1,10 @@
 import { next, select } from './life'
 
-type Cell = ReturnType<typeof next>[0][0]
+type Board = ReturnType<typeof next>
 
 describe('next', () => {
   describe('Given a cell is alive', () => {
-    describe.each<[Cell[][]]>([
+    describe.each<[Board]>([
       [
         [
           [0, 0, 0],
@@ -31,7 +31,7 @@ describe('next', () => {
 
     describe('When the number of neighbours is > 3', () => {
       test('the cell dies as if by overpopulation', () => {
-        const board: Cell[][] = [
+        const board: Board = [
           [1, 0, 1],
           [1, 1, 0],
           [0, 1, 1]
@@ -47,7 +47,7 @@ describe('next', () => {
 
     describe('When the number of neighbours is 2 or 3', () => {
       test('the cell survives', () => {
-        const board: Cell[][] = [
+        const board: Board = [
           [1, 0, 0],
           [0, 1, 0],
           [0, 1, 0]
@@ -65,7 +65,7 @@ describe('next', () => {
   describe('Given a cell is dead', () => {
     describe('When the number of neighbours is 3', () => {
       test('the cell lives', () => {
-        const board: Cell[][] = [
+        const board: Board = [
           [1, 0, 0],
           [1, 0, 0],
           [0, 0, 1]
@@ -82,7 +82,7 @@ describe('next', () => {
 
   describe('Still lifes', () => {
     test('Block', () => {
-      const board: Cell[][] = [
+      const board: Board = [
         [0, 0, 0, 0],
         [0, 1, 1, 0],
         [0, 1, 1, 0],
@@ -93,7 +93,7 @@ describe('next', () => {
     })
 
     test('Bee-hive', () => {
-      const board: Cell[][] = [
+      const board: Board = [
         [0, 0, 0, 0, 0, 0],
         [0, 0, 1, 1, 0, 0],
         [0, 1, 0, 0, 1, 0],
@@ -105,7 +105,7 @@ describe('next', () => {
     })
 
     test('Loaf', () => {
-      const board: Cell[][] = [
+      const board: Board = [
         [0, 0, 0, 0, 0, 0],
         [0, 0, 1, 1, 0, 0],
         [0, 1, 0, 0, 1, 0],
@@ -118,7 +118,7 @@ describe('next', () => {
     })
 
     test('Boat', () => {
-      const board: Cell[][] = [
+      const board: Board = [
         [0, 0, 0, 0, 0],
         [0, 1, 1, 0, 0],
         [0, 1, 0, 1, 0],
@@ -130,7 +130,7 @@ describe('next', () => {
     })
 
     test('Tub', () => {
-      const board: Cell[][] = [
+      const board: Board = [
         [0, 0, 0, 0, 0],
         [0, 0, 1, 0, 0],
         [0, 1, 0, 1, 0],
@@ -144,7 +144,7 @@ describe('next', () => {
 
   describe('Oscillators', () => {
     test('Blinker', () => {
-      const board: Cell[][] = [
+      const board: Board = [
         [0, 0, 0, 0, 0],
         [0, 0, 1, 0, 0],
         [0, 0, 1, 0, 0],
@@ -152,7 +152,7 @@ describe('next', () => {
         [0, 0, 0, 0, 0]
       ]
 
-      const nextBoard: Cell[][] = [
+      const nextBoard: Board = [
         [0, 0, 0, 0, 0],
         [0, 0, 0, 0, 0],
         [0, 1, 1, 1, 0],
@@ -165,7 +165,7 @@ describe('next', () => {
     })
 
     test('Toad', () => {
-      const board: Cell[][] = [
+      const board: Board = [
         [0, 0, 0, 0, 0, 0],
         [0, 0, 0, 1, 0, 0],
         [0, 1, 0, 0, 1, 0],
@@ -174,7 +174,7 @@ describe('next', () => {
         [0, 0, 0, 0, 0, 0]
       ]
 
-      const nextBoard: Cell[][] = [
+      const nextBoard: Board = [
         [0, 0, 0, 0, 0, 0],
         [0, 0, 0, 0, 0, 0],
         [0, 0, 1, 1, 1, 0],
@@ -188,7 +188,7 @@ describe('next', () => {
     })
 
     test('Beacon', () => {
-      const board: Cell[][] = [
+      const board: Board = [
         [0, 0, 0, 0, 0, 0],
         [0, 1, 1, 0, 0, 0],
         [0, 1, 0, 0, 0, 0],
@@ -197,7 +197,7 @@ describe('next', () => {
         [0, 0, 0, 0, 0, 0]
       ]
 
-      const nextBoard: Cell[][] = [
+      const nextBoard: Board = [
         [0, 0, 0, 0, 0, 0],
         [0, 1, 1, 0, 0, 0],
         [0, 1, 1, 0, 0, 0],
@@ -214,7 +214,7 @@ describe('next', () => {
 
 describe('select', () => {
   test('kills a live cell', () => {
-    const board: Cell[][] = [
+    const board: Board = [
       [0, 0, 0],
       [0, 1, 0],
       [0, 0, 0]
@@ -230,7 +230,7 @@ describe('select', () => {
   })
 
   test('resurrects a dead cell', () => {
-    const board: Cell[][] = [
+    const board: Board = [
       [0, 0, 0],
       [0, 0, 0],
       [0, 0, 0]
