@@ -1,7 +1,4 @@
-import type { Board } from '../types'
-
-const ALIVE = 1
-const DEAD = 0
+import { ALIVE, DEAD, Board } from '../types'
 
 const getCountOfLiveNeighbours = (
   x: number,
