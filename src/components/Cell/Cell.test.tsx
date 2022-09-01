@@ -34,11 +34,12 @@ describe('Cell', () => {
     expect(findCell()).toBeDisabled()
   })
 
-  test('invokes the callback function on click', () => {
+  test('invokes the callback function on click', async () => {
+    const user = userEvent.setup()
     const onClick: jest.MockedFunction<OnClick> = jest.fn()
     renderCell({ onClick })
 
-    userEvent.click(findCell())
+    await user.click(findCell())
 
     expect(onClick).toHaveBeenCalledTimes(1)
   })

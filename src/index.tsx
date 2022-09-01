@@ -1,5 +1,5 @@
 import { StrictMode } from 'react'
-import ReactDOM from 'react-dom'
+import { createRoot } from 'react-dom/client'
 import { createGlobalStyle } from 'styled-components'
 
 import { App } from './App'
@@ -36,12 +36,14 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
-ReactDOM.render(
+const container = document.getElementById('root')
+const root = createRoot(container!)
+
+root.render(
   <StrictMode>
     <GlobalStyle />
     <App />
-  </StrictMode>,
-  document.getElementById('root')
+  </StrictMode>
 )
 
 // If you want to start measuring performance in your app, pass a function
