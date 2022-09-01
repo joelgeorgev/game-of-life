@@ -1,22 +1,15 @@
 {
   "files": {
-    "main.js": "/game-of-life/static/js/main.75cac1ca.chunk.js",
-    "main.js.map": "/game-of-life/static/js/main.75cac1ca.chunk.js.map",
-    "runtime-main.js": "/game-of-life/static/js/runtime-main.8423b4a1.js",
-    "runtime-main.js.map": "/game-of-life/static/js/runtime-main.8423b4a1.js.map",
-    "static/js/2.027309f3.chunk.js": "/game-of-life/static/js/2.027309f3.chunk.js",
-    "static/js/2.027309f3.chunk.js.map": "/game-of-life/static/js/2.027309f3.chunk.js.map",
-    "static/js/3.924dd3bb.chunk.js": "/game-of-life/static/js/3.924dd3bb.chunk.js",
-    "static/js/3.924dd3bb.chunk.js.map": "/game-of-life/static/js/3.924dd3bb.chunk.js.map",
+    "main.js": "/game-of-life/static/js/main.83a787d1.js",
+    "static/js/496.cde0e929.chunk.js": "/game-of-life/static/js/496.cde0e929.chunk.js",
+    "static/media/source-sans-pro-v11-latin-regular.woff": "/game-of-life/static/media/source-sans-pro-v11-latin-regular.74ddb2b07a7f05bded6d.woff",
+    "static/media/source-sans-pro-v11-latin-regular.woff2": "/game-of-life/static/media/source-sans-pro-v11-latin-regular.96b158827eaacc5f7912.woff2",
+    "static/media/github.svg": "/game-of-life/static/media/github.6637870789067db1d24b378d4c212276.svg",
     "index.html": "/game-of-life/index.html",
-    "static/js/2.027309f3.chunk.js.LICENSE.txt": "/game-of-life/static/js/2.027309f3.chunk.js.LICENSE.txt",
-    "static/media/github.66378707.svg": "/game-of-life/static/media/github.66378707.svg",
-    "static/media/source-sans-pro-v11-latin-regular.74ddb2b0.woff": "/game-of-life/static/media/source-sans-pro-v11-latin-regular.74ddb2b0.woff",
-    "static/media/source-sans-pro-v11-latin-regular.96b15882.woff2": "/game-of-life/static/media/source-sans-pro-v11-latin-regular.96b15882.woff2"
+    "main.83a787d1.js.map": "/game-of-life/static/js/main.83a787d1.js.map",
+    "496.cde0e929.chunk.js.map": "/game-of-life/static/js/496.cde0e929.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.8423b4a1.js",
-    "static/js/2.027309f3.chunk.js",
-    "static/js/main.75cac1ca.chunk.js"
+    "static/js/main.83a787d1.js"
   ]
 }
