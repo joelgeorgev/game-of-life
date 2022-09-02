@@ -1,15 +1,24 @@
-import { createRoot } from 'react-dom/client'
+import { render, screen } from '@testing-library/react'
 
 import { App } from './App'
 
+const renderApp = () => render(<App />)
+
 describe('App', () => {
-  test('renders', () => {
-    const container = document.createElement('div')
-    const root = createRoot(container)
+  test('renders a heading', () => {
+    renderApp()
 
-    root.render(<App />)
+    expect(screen.getByRole('heading', { name: 'Game of Life' })).toBeDefined()
+  })
 
-    root.unmount()
-    container.remove()
+  test('renders a link to the repository', () => {
+    renderApp()
+
+    const link: HTMLAnchorElement = screen.getByRole('link', {
+      name: 'Go to GitHub repository page'
+    })
+
+    expect(link).toBeDefined()
+    expect(link.href).toEqual('https://github.com/joelgeorgev/game-of-life')
   })
 })
