@@ -11,9 +11,9 @@ Check out the app [here](https://joelgeorgev.github.io/game-of-life).
 ## To run the app
 
 ```bash
-$ git clone https://github.com/joelgeorgev/game-of-life.git
-$ cd game-of-life
-$ npm install && npm start
+$ nvm use
+$ npm ci
+$ npm start
 ```
 
 ## License
