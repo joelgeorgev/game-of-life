@@ -32,10 +32,11 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "check": "npm run check:format && npm run check:types",
+    "check": "npm run check:format && npm run check:types && npm run check:lint",
     "check:format": "prettier --check \"./**/*.{html,ts,tsx,json,yml,md}\"",
     "check:types": "tsc",
     "check:types:watch": "npm run check:types -- --watch",
+    "check:lint": "oxlint",
     "test": "vitest",
     "test:coverage": "vitest run --coverage",
     "predeploy": "npm run build",
@@ -46,6 +47,7 @@
     "@vitejs/plugin-react": "^5.1.4",
     "@vitest/coverage-v8": "^4.0.18",
     "jsdom": "^28.1.0",
+    "oxlint": "^1.50.0",
     "vite": "^7.3.1",
     "vitest": "^4.0.18"
   }
