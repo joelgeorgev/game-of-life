@@ -1,3 +1,4 @@
+import { MockedFunction } from 'vitest'
 import type { ComponentProps } from 'react'
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
@@ -36,7 +37,7 @@ describe('Cell', () => {
 
   test('invokes the callback function on click', async () => {
     const user = userEvent.setup()
-    const onClick: jest.MockedFunction<OnClick> = jest.fn()
+    const onClick: MockedFunction<OnClick> = vi.fn()
     renderCell({ onClick })
 
     await user.click(findCell())
