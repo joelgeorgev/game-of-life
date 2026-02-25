@@ -37,10 +37,13 @@
     "check:lint": "oxlint",
     "test": "vitest",
     "test:coverage": "vitest run --coverage",
+    "test:mutation": "stryker run",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "devDependencies": {
+    "@stryker-mutator/core": "^9.5.1",
+    "@stryker-mutator/vitest-runner": "^9.5.1",
     "@testing-library/jest-dom": "^6.9.1",
     "@vitejs/plugin-react": "^5.1.4",
     "@vitest/coverage-v8": "^4.0.18",
