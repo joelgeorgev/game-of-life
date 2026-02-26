@@ -2,8 +2,8 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { createGlobalStyle } from 'styled-components'
 
-import { App } from './App'
-import reportWebVitals from './reportWebVitals'
+import { App } from './App.tsx'
+import reportWebVitals from './reportWebVitals.ts'
 
 import woff2 from './fonts/source-sans-pro-v11-latin-regular.woff2'
 

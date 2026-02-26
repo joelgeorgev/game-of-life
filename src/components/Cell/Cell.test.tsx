@@ -3,7 +3,7 @@ import type { ComponentProps } from 'react'
 import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 
-import { Cell } from '.'
+import { Cell } from './Cell.tsx'
 
 type Props = ComponentProps<typeof Cell>
 type OnClick = Props['onClick']

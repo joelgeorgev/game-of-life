@@ -1,4 +1,4 @@
-import { next, select } from './life'
+import { next, select } from './life.ts'
 
 type Board = ReturnType<typeof next>
 
