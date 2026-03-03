@@ -12,32 +12,32 @@ const getCountOfLiveNeighbours = (
   const nextRow = board[x + 1]
 
   if (previousRow) {
-    if (previousRow[y - 1] && previousRow[y - 1] === ALIVE) {
+    if (previousRow[y - 1]) {
       count++
     }
-    if (previousRow[y] && previousRow[y] === ALIVE) {
+    if (previousRow[y]) {
       count++
     }
-    if (previousRow[y + 1] && previousRow[y + 1] === ALIVE) {
+    if (previousRow[y + 1]) {
       count++
     }
   }
 
-  if (currentRow[y - 1] && currentRow[y - 1] === ALIVE) {
+  if (currentRow[y - 1]) {
     count++
   }
-  if (currentRow[y + 1] && currentRow[y + 1] === ALIVE) {
+  if (currentRow[y + 1]) {
     count++
   }
 
   if (nextRow) {
-    if (nextRow[y - 1] && nextRow[y - 1] === ALIVE) {
+    if (nextRow[y - 1]) {
       count++
     }
-    if (nextRow[y] && nextRow[y] === ALIVE) {
+    if (nextRow[y]) {
       count++
     }
-    if (nextRow[y + 1] && nextRow[y + 1] === ALIVE) {
+    if (nextRow[y + 1]) {
       count++
     }
   }
@@ -54,14 +54,11 @@ export const next = (board: Readonly<Board>): Board =>
         board
       )
 
-      if (
-        cell === ALIVE &&
-        (countOfLiveNeighbours < 2 || countOfLiveNeighbours > 3)
-      ) {
+      if (countOfLiveNeighbours < 2 || countOfLiveNeighbours > 3) {
         return DEAD
       }
 
-      if (cell === DEAD && countOfLiveNeighbours === 3) {
+      if (countOfLiveNeighbours === 3) {
         return ALIVE
       }
 
