@@ -8,7 +8,9 @@ describe('App', () => {
   test('renders a heading', () => {
     renderApp()
 
-    expect(screen.getByRole('heading', { name: 'Game of Life' })).toBeDefined()
+    expect(
+      screen.getByRole('heading', { name: 'Game of Life' })
+    ).toBeInTheDocument()
   })
 
   test('renders a link to the repository', () => {
@@ -18,7 +20,7 @@ describe('App', () => {
       name: 'Go to GitHub repository page'
     })
 
-    expect(link).toBeDefined()
+    expect(link).toBeInTheDocument()
     expect(link.href).toEqual('https://github.com/joelgeorgev/game-of-life')
   })
 })
